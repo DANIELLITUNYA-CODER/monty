@@ -27,10 +27,8 @@ int main(int argc, char *argv[])
 	while (getline(&(bus.content), &(bus.size), bus.file) != -1)
 	{
 		bus.line_number++;
-		execute(&bus);
 	}
 
-	free_stack(bus.stack);
 	fclose(bus.file);
 	free(bus.content);
 
